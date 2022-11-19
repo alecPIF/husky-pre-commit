@@ -2,8 +2,6 @@
 
 This text outlines how to implement [githooks](https://git-scm.com/docs/githooks), specifically pre-commit hooks to a project.
 
-## Javascript Project
-
 ### 1. Install the following packages in the project root:
 
 ```
@@ -57,7 +55,7 @@ Manually add the following to the root `package.json` file.
 ```
 "scripts": {
     /* other scripts */
-    "configure-husky": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\""
+    "prepare": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\""
 },
 ```
 
