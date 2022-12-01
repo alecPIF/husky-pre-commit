@@ -5,7 +5,7 @@ This text outlines how to implement [githooks](https://git-scm.com/docs/githooks
 ### 1. Install the following packages in the project root:
 
 ```
-npm install --save-dev prettier lint-staged husky eslint commitlint-plugin-function-rules @commitlint/cli
+npm install --save-dev prettier lint-staged husky eslint commitlint-plugin-function-rules @commitlint/{cli,config-conventional}
 ```
 
 If working with typescript, install the following packages.
