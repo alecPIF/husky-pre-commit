@@ -67,7 +67,7 @@ Manually add the following to the root `package.json` file.
 },
 ```
 
-### 5. Finally, run
+### 7. Finally, run
 
 ```
 npm run husky-init
