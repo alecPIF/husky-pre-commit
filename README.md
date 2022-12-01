@@ -14,6 +14,10 @@ If working with typescript, install the following packages.
 npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
 
+```
+npm install --save-dev commitlint-plugin-function-rules @commitlint/cli
+```
+
 ### 2. Configure ESLint
 
 Add the `.eslintrc.json` and `.eslintignore` to the project root. Optionally, add the following if using typescript.
@@ -48,25 +52,23 @@ Add the following to the root `package.json` file.
 },
 ```
 
-### 5. Configure Husky.
+### 5. Configure commitlint.
+
+Add the `commitlint.config.js` to the project root.
+
+### 6. Configure Husky.
 
 Manually add the following to the root `package.json` file.
 
 ```
 "scripts": {
     /* other scripts */
-    "prepare": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\""
+    "husky-init": "npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\" && npx husky add .husky/commit-msg  'npx --no -- commitlint --edit ${1}'"
 },
-```
-
-or to run the following to automatically add to the `package.json`.
-
-```
-npm pkg set "scripts.prepare"="npx husky install && npx husky add .husky/pre-commit \"npx --no-install lint-staged\""
 ```
 
 ### 5. Finally, run
 
 ```
-npm install
+npm run husky-init
 ```
