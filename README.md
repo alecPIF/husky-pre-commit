@@ -5,17 +5,13 @@ This text outlines how to implement [githooks](https://git-scm.com/docs/githooks
 ### 1. Install the following packages in the project root:
 
 ```
-npm install --save-dev prettier lint-staged husky eslint
+npm install --save-dev prettier lint-staged husky eslint commitlint-plugin-function-rules @commitlint/cli
 ```
 
 If working with typescript, install the following packages.
 
 ```
 npm install --save-dev @typescript-eslint/parser @typescript-eslint/eslint-plugin
-```
-
-```
-npm install --save-dev commitlint-plugin-function-rules @commitlint/cli
 ```
 
 ### 2. Configure ESLint
